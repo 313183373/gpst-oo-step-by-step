@@ -1,9 +1,9 @@
 // Write your code here
 class Person {
-    constructor(name,age,id){
+    constructor(name,age){
         this.name=name;
         this.age=age;
-        this.id=id;
+        this.id=Person.idcount++;
     }
 
     introduce(){
@@ -11,5 +11,7 @@ class Person {
     }
 
 };
+
+Person.idcount=1;
 
 module.exports =Person;

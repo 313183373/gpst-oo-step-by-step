@@ -8,14 +8,14 @@ class Class {
     assignLeader(student) {
         if (this.hasStudent(student)) {
             this.leader = student;
-            console.log('Assign team leader successfully.');
             this.teachers.forEach(value => {
                 if (value.isTeaching(student)) {
                     value.welcomeNewLeader(student);
                 }
             })
+            return 'Assign team leader successfully.';
         } else {
-            console.log('It is not one of us.');
+            return 'It is not one of us.';
         }
     }
 
